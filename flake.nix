@@ -43,7 +43,7 @@
     # Define user configurations
     users = {
       reuben = {
-        avatar = ./files/avatar/face;
+        avatar = ./files/avatar/face.jpg;
         email = "reuben@talbott.ws";
         fullName = "Reuben Talbott";
         #gitKey = "";

@@ -54,7 +54,6 @@
         PMPrintingExpandedStateForPrint = true;
       };
       LaunchServices = {
-        LSQuarantine = false;
       };
       trackpad = {
         TrackpadRightClick = true;
@@ -85,23 +84,8 @@
         wvous-tl-corner = 1;
         wvous-tr-corner = 1;
       };
-      screencapture = {
-        location = "/Users/${userConfig.name}/Downloads/temp";
-        type = "png";
-        disable-shadow = true;
-      };
     };
-    keyboard = {
-      enableKeyMapping = true;
-      # Remap §± to ~
-      userKeyMapping = [
-        {
-          HIDKeyboardModifierMappingDst = 30064771125;
-          HIDKeyboardModifierMappingSrc = 30064771172;
-        }
-      ];
-    };
-  };
+ };
 
   # Zsh configuration
   programs.zsh.enable = true;
