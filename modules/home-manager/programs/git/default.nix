@@ -5,7 +5,7 @@
     userName = userConfig.fullName;
     userEmail = userConfig.email;
     signing = {
-      key = userConfig.gitKey;
+      #key = userConfig.gitKey;
       signByDefault = true;
     };
     delta = {

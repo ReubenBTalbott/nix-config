@@ -42,12 +42,12 @@
 
     # Define user configurations
     users = {
-      nabokikh = {
+      reuben = {
         avatar = ./files/avatar/face;
-        email = "alexander.nabokikh@olx.pl";
-        fullName = "Alexander Nabokikh";
-        gitKey = "C5810093";
-        name = "nabokikh";
+        email = "reuben@talbott.ws";
+        fullName = "Reuben Talbott";
+        #gitKey = "";
+        name = "reuben";
       };
     };
 
@@ -97,12 +97,12 @@
     };
 
     darwinConfigurations = {
-      "nabokikh-mac" = mkDarwinConfiguration "nabokikh-mac" "nabokikh";
+      "JenzabarPro" = mkDarwinConfiguration "JenzabarPro" "reuben";
     };
 
     homeConfigurations = {
       "nabokikh@energy" = mkHomeConfiguration "x86_64-linux" "nabokikh" "energy";
-      "nabokikh@nabokikh-mac" = mkHomeConfiguration "aarch64-darwin" "nabokikh" "nabokikh-mac";
+      "reuben@JenzabarPro" = mkHomeConfiguration "aarch64-darwin" "reuben" "JenzabarPro";
       "nabokikh@nabokikh-z13" = mkHomeConfiguration "x86_64-linux" "nabokikh" "nabokikh-z13";
     };
 
