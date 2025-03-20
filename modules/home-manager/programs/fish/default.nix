@@ -3,12 +3,6 @@
     enable = true;
     
     interactiveShellInit = ''
-      # Set environment variables
-      set -gx EDITOR nvim
-      set -gx VISUAL $EDITOR
-      
-      # Remove greeting
-      set -g fish_greeting
     '';
     
     shellAliases = {
