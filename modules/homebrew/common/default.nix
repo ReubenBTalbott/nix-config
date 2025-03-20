@@ -5,6 +5,13 @@
   homebrewModules,
   ...
 }:
+
+{
+  imports = [
+   ../${hostname}
+  ];
+}
+
 {
   homebrew = {
     enable = true;
@@ -21,12 +28,7 @@
     brews = [
       "mas"              # Mac App Store CLI
       "wget"             # File downloader
-      "ripgrep"          # Fast search tool
-      "fd"              # User-friendly find alternative
-      "jq"              # JSON processor
-      "tree"            # Directory listing
       "htop"            # Process viewer
-      "coreutils"       # GNU core utilities
     ];
 
     # Homebrew casks (applications)
@@ -60,14 +62,13 @@
       "homebrew/core"
       "homebrew/cask"
       "homebrew/bundle"
-      "roots/tap"
     ];
 
     # Mac App Store apps
     masApps = {
-      "Keynote" = 409183694;
-      "Numbers" = 409203825;
-      "Pages" = 409201541;
+      "Refined GitHub" = 1519867270;
+      "bonjourrStartpage" = 1615431236;
+      "Microsoft To Do" = 1274495053;
     };
   };
 }

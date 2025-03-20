@@ -30,6 +30,11 @@
     home = "/Users/${userConfig.name}";
   };
 
+  # Set fish as the default shell
+  users.knownUsers = [ "${userConfig.name}" ];
+  users.users.${userConfig.name}.uid = 501;
+  users.users.${userConfig.name}.shell = pkgs.fish;
+
   # Add ability to use TouchID for sudo
   security.pam.services.sudo_local.touchIdAuth = true;
 
@@ -87,8 +92,8 @@
     };
  };
 
-  # Zsh configuration
-  programs.zsh.enable = true;
+  # Fish configuration
+  programs.fish.enable = true;
 
   # Fonts configuration
   fonts.packages = with pkgs; [

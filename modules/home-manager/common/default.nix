@@ -10,6 +10,7 @@
     ../programs/bat
     ../programs/btop
     ../programs/fastfetch
+    ../programs/fish
     ../programs/git
     ../programs/tmux
     ../scripts
