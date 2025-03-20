@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ../${hostname}
     ../misc/qt
     ../programs/bat
     ../programs/btop
