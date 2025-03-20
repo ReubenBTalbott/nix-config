@@ -28,12 +28,12 @@
   users.users.${userConfig.name} = {
     name = "${userConfig.name}";
     home = "/Users/${userConfig.name}";
+    uid = 501;
+    shell = pkgs.fish;
   };
 
-  # Set fish as the default shell
+  # Set known users
   users.knownUsers = [ "${userConfig.name}" ];
-  users.users.${userConfig.name}.uid = 501;
-  users.users.${userConfig.name}.shell = pkgs.fish;
 
   # Add ability to use TouchID for sudo
   security.pam.services.sudo_local.touchIdAuth = true;
