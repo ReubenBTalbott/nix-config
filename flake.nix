@@ -28,6 +28,12 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Add nix-homebrew input
+    nix-homebrew = {
+      url = "github:zhaofengli-wip/nix-homebrew";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -36,6 +42,7 @@
     darwin,
     home-manager,
     nixpkgs,
+    nix-homebrew,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -69,10 +76,12 @@
         specialArgs = {
           inherit inputs outputs hostname;
           userConfig = users.${username};
+          homebrewModules = "${self}/modules/homebrew";
         };
         modules = [
           ./hosts/${hostname}
           home-manager.darwinModules.home-manager
+          nix-homebrew.darwinModules.nix-homebrew
         ];
       };
 
